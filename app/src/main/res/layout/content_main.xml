@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.pandey.apurv.mindvalley.activities.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout2">
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Image"
+        android:id="@+id/btnLoadImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="btnImageRequestClicked"
+        android:layout_toStartOf="@+id/progressBar"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:layout_toLeftOf="@+id/progressBar"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Users List"
+        android:id="@+id/btnLoadUsersList"
+        android:onClick="btnLoadApiClicked"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/frameLayout2"
+        android:layout_toEndOf="@+id/frameLayout2"
+        android:layout_marginBottom="64dp"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Image"
+        android:id="@+id/btnClearImage"
+        android:onClick="btnClearImage"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_alignRight="@+id/ivUser"
+        android:layout_alignEnd="@+id/ivUser"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Load Image from Cache by clicking Load Image button"
+        android:gravity="center"
+        android:id="@+id/textView"
+        android:layout_below="@+id/ivUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ivUser"
+        android:src="@drawable/placeholder"
+        android:layout_below="@+id/btnLoadImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignBottom="@+id/ivUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp"
+        android:indeterminate="false"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear Cache"
+        android:id="@+id/btnClearCache"
+        android:onClick="btnClearCache"
+        android:layout_alignTop="@+id/btnLoadUsersList"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"/>
+
+</RelativeLayout>
